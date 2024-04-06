@@ -11,6 +11,7 @@ const routerAuth = require("./routes/auth.route");
 const routerUser = require("./routes/user.route");
 const routerNoodle = require("./routes/noodle.route");
 const routerAuthor = require("./routes/author.route");
+const routerMail = require("./routes/mail.route");
 
 // kết nối mongodb
 connectDB();
@@ -25,6 +26,7 @@ app.use("/api/v1/auth", routerAuth);
 app.use("/api/v1/user", routerUser);
 app.use("/api/v1/product", routerNoodle);
 app.use("/api/v1/author", routerAuthor);
+app.use("/api/v1/email", routerMail);
 
 const PORT = 8080;
 app.listen(process.env.PORT || PORT, () => {
